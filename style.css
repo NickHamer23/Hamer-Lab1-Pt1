@@ -14,27 +14,26 @@ a:visited{
     color: #69696a
 }
 
-li{
-    margin-top: 10px;
-}
-
-.bold{
-    font-weight: bold;
-}
-
-.buttonmargin{
-    margin-top: 10px;
-}
-
-.mainmargins{
-    margin-top: 30px;
-    margin-bottom: 25px;
-}
-
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+    font-size: 16px;
+    
+}
+
+header h1{
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+header nav ul li{
+    margin-bottom: 10px;
 }
 
 button{
@@ -55,27 +54,95 @@ p{
 
 footer {
     position: fixed;
-    display: inline-flex;
+    display: flex;
     height: 35px;
     background-color: rgba(247, 193, 162, 0.7);
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
 }
 
 .footerchirp{
     margin-left: 20px;
     font-weight: bold;
 }
-.footernav{
-    margin-right: 20px;
+
+footer ul{
+    display:flex;
+    flex-direction: row;
 }
-.horizontallist{
-    margin-left: 20px;
-    display: inline;
+
+footer nav ul li{
+    margin-right:20px
+}
+
+@media screen and (min-width: 768px){
+    header{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header div{
+        display:flex;
+        align-items: center;
+    }
+    header h1 {
+        margin-bottom: 0;
+    }
+    header button{
+        width:80px;
+    }
+    header nav ul{
+        display:flex;
+        flex-direction: row;
+    }
+    header nav ul li{
+        margin: 0 10px 0 0;
+    }
+    main{
+        margin-top: 200px;
+    }
+    main p{
+        width:50%;
+    }
+    main button{
+        width:50%;
+    }
+    .pinkcir{
+        position:absolute;
+        right: 80px;
+        top:260px;
+        background-color: rgba(247, 136, 167, 0.6);
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        display:inline-block;
+        z-index: 0;
+    }
+    .peachcir{
+        position: absolute;
+        right:20px;
+        top: 375px;
+        background-color: rgba(247, 193, 162, 0.7);
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        display:inline-block;
+        z-index: 100;
+
+    }
+    .purplecir{
+        position: absolute;
+        right: 20px;
+        top: 300px;
+        background-color: rgba(207, 130, 213, 0.6);
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        display:inline-block;
+        z-index: 50;
+    }
 }
